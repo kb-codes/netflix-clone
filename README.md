@@ -2,9 +2,7 @@
 ## Overview :
 The goal is to build a clone app with the purpose of practice to develope a mobile application using React Native.
 
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Netflix Clone Image"
+![](./screenshots.png)
 
 ## Installation :
 * Clone repository and install dependencies:
