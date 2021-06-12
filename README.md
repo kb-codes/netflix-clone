@@ -2,7 +2,7 @@
 ## Overview :
 The goal is to build a clone app with the purpose of practice to develope a mobile application using React Native.
 
-![](./screenshots.png)
+![](./screenshots.jpg)
 
 ## Installation :
 * Clone repository and install dependencies:
