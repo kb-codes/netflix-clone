@@ -9,19 +9,19 @@ import {
   SafeAreaView
 } from 'react-native';
 
-import {
-  AdMobBanner,
-  AdMobInterstitial,
-  PublisherBanner,
-  AdMobRewarded,
-} from 'react-native-admob';
+// import {
+//   AdMobBanner,
+//   AdMobInterstitial,
+//   PublisherBanner,
+//   AdMobRewarded,
+// } from 'react-native-admob';
 
 export default function LoginScreen({navigation}) {
-  useEffect(()=>{
-    // Display a rewarded ad
-      AdMobRewarded.setAdUnitID('ca-app-pub-3940256099942544/5224354917');
-      AdMobRewarded.requestAd().then(() => AdMobRewarded.showAd());
-  },[])
+  // useEffect(()=>{
+  //   // Display a rewarded ad
+  //     AdMobRewarded.setAdUnitID('ca-app-pub-3940256099942544/5224354917');
+  //     AdMobRewarded.requestAd().then(() => AdMobRewarded.showAd());
+  // },[])
   
   return (
     <SafeAreaView
@@ -91,7 +91,7 @@ export default function LoginScreen({navigation}) {
                 justifyContent: 'center',
               }}
               onPress={() => {
-                navigation.navigate('HomeScreen');
+                navigation.navigate('TabNavigation');
               }}>
               <Text style={styles.buttonText}>Log In</Text>
             </TouchableOpacity>
@@ -119,13 +119,13 @@ export default function LoginScreen({navigation}) {
             alignItems: 'center',
 
           }}>
-            <PublisherBanner
+            {/* <PublisherBanner
               adSize="banner"
               adUnitID="ca-app-pub-3940256099942544/6300978111"
               testDevices={[PublisherBanner.simulatorId]}
               onAdFailedToLoad={error => console.error(error)}
               onAppEvent={event => console.log(event.name, event.info)}
-            />
+            /> */}
           </View>
     </SafeAreaView>
   );

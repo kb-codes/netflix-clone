@@ -1,7 +1,5 @@
 import React from 'react';
-
-import { StatusBar, Dimensions } from 'react-native';
-
+import { StatusBar, Dimensions, ScrollView,TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 import styled from 'styled-components/native';
@@ -49,16 +47,22 @@ const Gradient = styled(LinearGradient)`
 	height: 100%;
 `
 
-const HomeScreen = () => {
+export default function SplashScreen({navigation}) {
 	return (
 		<>
+		<ScrollView>
 			<StatusBar
 				translucent
 				backgroundColor='transparent'
 				barStyle='light-content'
 			/>
 			<Container>
-				<Poster source={require('./assets/dark.jpg')}>
+				<TouchableOpacity
+					onPress={() => {
+					navigation.navigate("VideoPlayer");
+					}}
+				>
+				<Poster source={require('./assets/defenders.jpg')}>
 					<Gradient
 						locations={[0, 0.2, 0.6, 0.93]}
 						colors={[
@@ -71,13 +75,13 @@ const HomeScreen = () => {
 						<Hero />
 					</Gradient>
 				</Poster>
+				</TouchableOpacity>
 				<Movies label='Recommendation' item={api1} />
 				<Movies label='Popular on Netflix' item={api2} />
 				<Movies label='Hollywood Movies' item={api3} />
 				<Movies label='Hindi Movies & TV' item={api4} />
 			</Container>
+			</ScrollView>
 		</>
 	)
 }
-
-export default HomeScreen;

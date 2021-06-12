@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
 
 
@@ -72,12 +72,12 @@ const TextButtonPlay = styled.Text`
 	padding-left: 5px;
 `
 
-const Hero = () => {
+const Hero = (navigation) => {
 	return (
 		<Container>
 			
 			<Tags>
-				<MenuTag>Everything is Connected</MenuTag>
+				<MenuTag>Daredevil, Jessica Jones, Luke Cage, Iron Fist</MenuTag>
 				
 			</Tags>
 			<MenuHero>
@@ -86,11 +86,11 @@ const Hero = () => {
 					<TextButton>My List</TextButton>
 				</Button>
 
+				
 				<Play>
 					<Ionicons name='ios-play' size={26} />
 					<TextButtonPlay>Play</TextButtonPlay>
 				</Play>
-
 				<Button>
 					<Feather name='info' size={26} color='#FFF' />
 					<TextButton>Info</TextButton>
